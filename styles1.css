@@ -130,3 +130,20 @@ button:hover {
     border-radius: 8px;
     border: solid 1px;
 }
+#countdownMinutes
+{
+    background: linear-gradient(to right, #223e72, #4167aa);
+    border-radius: 8px;
+    border: solid 1px;
+}
+.dark-mode #alarmTime{
+    background: linear-gradient(to right, #333232a2, #434343);
+    border-radius: 8px;
+    border: solid 1px;
+}
+.dark-mode #countdownMinutes
+{
+    background: linear-gradient(to right, #333232a2, #434343);
+    border-radius: 8px;
+    border: solid 1px;
+}
