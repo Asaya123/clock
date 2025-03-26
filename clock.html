@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Alarm</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+    <div class="container">
+        <h1>Digital Clock</h1>
+        <div id="clock"></div>
+        <div id="date"></div>
+        
+        <div class="alarm-section">
+            <h2>Set Alarm</h2>
+            <input type="time" id="alarmTime">
+            <button onclick="setAlarm()">Set Alarm</button>
+        </div>
+        
+        <div class="stopwatch">
+            <h2>Stopwatch</h2>
+            <div id="stopwatchDisplay">00:00:00</div>
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="pauseStopwatch()">Pause</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
+        
+        <div class="countdown">
+            <h2>Countdown Timer</h2>
+            <input type="number" id="countdownMinutes" placeholder="Minutes">
+            <button onclick="startCountdown()">Start Countdown</button>
+            <div id="countdownDisplay"></div>
+        </div>
+    </div>
+
+    <script src="jsclock.js"></script>
+</body>
+</html>
