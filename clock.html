@@ -10,17 +10,30 @@
     <header>
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </header>
+    
     <div class="container">
         <h1>Digital Clock</h1>
-        <div id="clock"></div>
+        
+
+        <div id="clock" class="glow"></div>
         <div id="date"></div>
         
+
+        <div class="analog-clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center-dot"></div>
+        </div>
+
+       
         <div class="alarm-section">
             <h2>Set Alarm</h2>
             <input type="time" id="alarmTime">
             <button onclick="setAlarm()">Set Alarm</button>
         </div>
         
+  
         <div class="stopwatch">
             <h2>Stopwatch</h2>
             <div id="stopwatchDisplay">00:00:00</div>
@@ -29,6 +42,7 @@
             <button onclick="resetStopwatch()">Reset</button>
         </div>
         
+
         <div class="countdown">
             <h2>Countdown Timer</h2>
             <input type="number" id="countdownMinutes" placeholder="Minutes">
