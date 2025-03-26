@@ -1,29 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f7f3f3;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
-    padding: 20px;
+    transition: background 0.5s ease-in-out;
 }
 
 .container {
     max-width: 500px;
-    margin: auto;
+    margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: #817e7e;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+h1 {
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+}
+
 
 #clock {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0px 0px 15px #00ffcc;
 }
 
-.alarm-section, .stopwatch, .countdown {
-    margin-top: 20px;
-}
 
 button {
     background-color: #444;
@@ -33,18 +39,20 @@ button {
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #666;
 }
-.dark-mode button {
-    background-color: #444;
-    color: white;
+
+
+.dark-mode {
+    background: linear-gradient(to right, #000000, #434343);
 }
 
-.dark-mode button:hover {
-    background-color: #666;
+.dark-mode #clock {
+    text-shadow: 0px 0px 15px #ffcc00;
 }
 
 #dark-mode-toggle {
@@ -58,20 +66,67 @@ button:hover {
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 #dark-mode-toggle:hover {
     background-color: #217888;
 }
-.dark-mode {
-    background-color: #121212;
-    color: white;
+
+
+.analog-clock {
+    width: 100px;
+    height: 100px;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background: black;
 }
-.dark-mode-container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #3d3c3c;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+
+.center-dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    background: white;
+    transform-origin: bottom;
+}
+
+.hour-hand {
+    width: 5px;
+    height: 30px;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.minute-hand {
+    width: 3px;
+    height: 40px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.second-hand {
+    width: 2px;
+    height: 45px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+}
+#alarmTime{
+    background: linear-gradient(to right, #223e72, #4167aa);
+    border-radius: 8px;
+    border: solid 1px;
 }
