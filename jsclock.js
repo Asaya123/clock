@@ -1,3 +1,4 @@
+
 function updateClock() {
     const now = new Date();
     document.getElementById('clock').innerText = now.toLocaleTimeString();
@@ -5,12 +6,12 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 
+
 let alarmTime = null;
 function setAlarm() {
     alarmTime = document.getElementById('alarmTime').value;
     alert('Alarm set for ' + alarmTime);
 }
-
 function checkAlarm() {
     const now = new Date();
     const currentTime = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
@@ -20,11 +21,11 @@ function checkAlarm() {
 }
 setInterval(checkAlarm, 60000);
 
-let stopwatchInterval;
-let stopwatchTime = 0;
+
+let stopwatchInterval, stopwatchTime = 0;
 function startStopwatch() {
     stopwatchInterval = setInterval(() => {
-        stopwatchTime+=1;
+        stopwatchTime++;
         document.getElementById('stopwatchDisplay').innerText = new Date(stopwatchTime * 1000).toISOString().substr(11, 8);
     }, 1000);
 }
@@ -36,6 +37,7 @@ function resetStopwatch() {
     stopwatchTime = 0;
     document.getElementById('stopwatchDisplay').innerText = '00:00:00';
 }
+
 
 let countdownInterval;
 function startCountdown() {
@@ -50,6 +52,7 @@ function startCountdown() {
         }
     }, 1000);
 }
+
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 });
